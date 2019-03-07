@@ -28,7 +28,7 @@ https.createServer(sslOptions, app).listen(app.get("port"), function()
 	console.log("Start Bot Success!");
 });
 
-app.get("/bot", function(request, response)
+app.get("/webhook", function(request, response)
 {
 	if (request.query["hub.mode"] === "subscribe" && request.query["hub.verify_token"] === pages.GetVertifyToken())
 	{
@@ -40,7 +40,7 @@ app.get("/bot", function(request, response)
 	}  
 });
 
-app.post("/bot", function(request, response)
+app.post("/webhook", function(request, response)
 {
 	var data = request.body;
 	if (data.object === "page" && data.entry !== undefined)
