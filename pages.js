@@ -1,4 +1,4 @@
-var VERIFY_TOKEN = "EAADqWjBZB7owBAOOgLIdYkRkC8t3lTHWdT4RmQpc6Jqdp1igj7QTfHAGf1KxeLpb8RKYokWBZADcuZBIcPG3cTLDhx8CTP0DBR63oWpIEKaxAem48e4WEz3SCRDaUiEJe9rHt540TT5Wp2NrF1QnP7JFq5VJiaKMQZAhi7gzgS5f3kBMg5t7";
+var VERIFY_TOKEN = "@@yolostudio";
 var PAGES = [
 	// Add your pages here, change key for each one, I use numberical values starting at 0
 	{
