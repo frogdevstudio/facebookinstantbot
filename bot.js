@@ -6,6 +6,7 @@ var cors = require("cors");
 var redis = require("redis");
 var https = require("https");
 var fs = require("fs");
+var messaging = require("./messaging.js");
 
 var red = redis.createClient();
 red.on("error", (err) =>
@@ -113,7 +114,7 @@ function AddPlayer(sender_id, player_id, context_id, game)
 			else
 				red.hmset(key, "pid", sender_id, "tsm", "0", "lt", now);
 
-			console.log("Added " + pid + "success!");
+			console.log("Added " + sender_id + " to databse success!");
 		}
 		else
 		{
