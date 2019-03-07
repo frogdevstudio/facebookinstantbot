@@ -26,7 +26,7 @@ app.use(cors());
 
 https.createServer(sslOptions, app).listen(app.get("port"), function()
 {
-	console.log("Start Bot Success!");
+	console.log("Start FBInstant Bot Success!");
 });
 
 app.get("/webhook", function(request, response)
@@ -114,7 +114,7 @@ function AddPlayer(sender_id, player_id, context_id, game)
 			else
 				red.hmset(key, "pid", sender_id, "tsm", "0", "lt", now);
 
-			console.log("Added " + sender_id + " to databse success!");
+			console.log("Added " + sender_id + " to database success!");
 		}
 		else
 		{
