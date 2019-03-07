@@ -11,11 +11,17 @@ red.on("error", (err) =>
 	//console.log("Redis error: " + err);
 });
 
+const sslOptions = {
+    key: fs.readFileSync('yolostudio_xyz.key'),
+    cert: fs.readFileSync('yolostudio_xyz.crt'),
+    ca: fs.readFileSync('yolostudio_xyz.ca-bundle')
+};
+
 app.set("port", (process.env.PORT || 8000));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.listen(app.get("port"), function()
+https.createServer(sslOptions, app).listen(app.get("port"), function()
 {
 	console.log("Start Bot Success!");
 });
