@@ -17,6 +17,7 @@ app.use(cors());
 
 app.listen(app.get("port"), function()
 {
+	console.log("Start Bot Success!");
 });
 
 app.get("/bot", function(request, response)
