@@ -37,6 +37,7 @@ function CheckAndRemovePlayer(key, tsm)
 var cursor = 0;
 function ProcessPlayers()
 {
+	console.log("crawler - ProcessPlayers");
 	var now = Date.now();
 	red.scan(cursor, "COUNT", 50, function(err, res) {
 		if (!err)

@@ -112,6 +112,8 @@ function AddPlayer(sender_id, player_id, context_id, game)
 				red.hmset(key, "pid", sender_id, "cid", context_id, "tsm", "0", "lt", now);
 			else
 				red.hmset(key, "pid", sender_id, "tsm", "0", "lt", now);
+
+			console.log("Added " + pid + "success!");
 		}
 		else
 		{
